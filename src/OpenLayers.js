@@ -4,21 +4,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import _ from 'underscore';
-
 import OpenLayersStyle from './OpenLayersStyle';
 import OpenLayersConst from './OpenLayersConst';
 
-if (process.env.BROWSER) {
+// if (process.env.BROWSER) {
     require('openlayers/css/ol.css');
-}
+// }
 
 var ol
 var mapLayer
 var mainMap
 
 const Root = styled.div`
-    height: '100%'
+    height: 100%;
 `;
 
 class OpenLayers extends React.Component {

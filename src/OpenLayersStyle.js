@@ -535,4 +535,4 @@ var OpenLayersStyle = {
     }
 }
 
-module.exports = OpenLayersStyle
+export default OpenLayersStyle;

@@ -11,4 +11,4 @@ var OpenLayersConst = {
     FEATURE_KEY_DEFAULT: '5000',
 }
 
-module.exports = OpenLayersConst;
+export default OpenLayersConst;
