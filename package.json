@@ -1,6 +1,6 @@
 {
   "name": "@stickyboard/openlayers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "OpenLayers components for StickyBoard",
   "main": "dist/index.js",
   "scripts": {

@@ -68,7 +68,6 @@ class HeatMap extends React.Component {
         const { pointList } = this.props;
 
         if (prevProps.pointList.length !== pointList.length) {
-            console.log('pointList', pointList)
             mainMap.getLayers().getArray().splice(1, 0, this.getHeatMapLayer())
             mainMap.render();
         }
