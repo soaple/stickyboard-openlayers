@@ -62,15 +62,25 @@ class HeatMap extends React.Component {
                 maxZoom: this.props.maxZoom
             })
         });
+
+        const { pointList } = this.props;
+
+        if (pointList && pointList.length > 0) {
+            this.renderHeatMapLayer();
+        }
     }
 
     componentDidUpdate(prevProps) {
         const { pointList } = this.props;
 
         if (prevProps.pointList.length !== pointList.length) {
-            mainMap.getLayers().getArray().splice(1, 0, this.getHeatMapLayer())
-            mainMap.render();
+            this.renderHeatMapLayer();
         }
+    }
+
+    renderHeatMapLayer = () => {
+        mainMap.getLayers().getArray().splice(1, 0, this.getHeatMapLayer());
+        mainMap.render();
     }
 
     getHeatMapLayer = () => {
